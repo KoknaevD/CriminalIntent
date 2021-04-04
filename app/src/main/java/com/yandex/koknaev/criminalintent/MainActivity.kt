@@ -2,7 +2,7 @@ package com.yandex.koknaev.criminalintent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.yandex.koknaev.criminalintent.ui.CrimeFragment
+import com.yandex.koknaev.criminalintent.ui.CrimeListFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
         if (currentFragment == null) {
-            val fragment = CrimeFragment()
+            val fragment = CrimeListFragment.NewInstance()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
